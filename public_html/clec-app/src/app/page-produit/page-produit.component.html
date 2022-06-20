@@ -1,0 +1,47 @@
+<div style="height: 80px;"></div>
+<div class="product-page-body">
+  <div class="container-acceuil">
+    <div class="container sproduct my-5 pt-5 pb-5" aria-label="informations générales sur un livre" role="afficher informations générales sur un livre" >
+      <div class="row  small-img-group">
+        <div class="col-lg-5 col-md-12 col-12">
+          <img class="img-fluid w-100 cadrage" src="../../assets/images/images-produits/default-img.jpg" alt="image du livre">
+      </div>
+    
+      <div class="col-lg-5 col-md-12 col-12">
+        <h6 aria-describedby="auteur livre">Auteur : <span>{{livre.aut}}</span></h6>
+        <div class="row">
+
+          <h3 class="py-2 col-lg-16" aria-describedby="titre du livre">{{livre.titre}}</h3>
+        </div>
+        
+        <div class="d-flex flex-row mb-4 row">
+          <div class="col-9"><h2 aria-describedby="prix du livre">{{livre.prix | currency:"CAD"}}&nbsp;</h2></div>
+          <div class="col-1"><span class="fs-5 badge bg-danger promo" aria-describedby="rabais">{{livre.rab}}%</span></div>
+        </div>
+        <button class="add-cart btn btn-primary btn-lg btn-dark py-3" aria-describedby="bouton pour ajouter au panier"(click)="handleAddToCart()">Ajouter au panier</button>
+        <h4 class="mt-5 " aria-describedby="Description">Description</h4>
+        <span class="desc">{{livre.des}}</span>
+        <br/>
+        <br/>
+        <table aria-describedby="plus d'informations">
+          <div style="height: 40px;"></div>
+          <tr class=" info" >
+            <th>Code de produit:</th>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{livre.cpr}}</td>
+          </tr>
+          <div style="height: 10px;"></div>
+        <tr class="mb-5 bd-highlight info">
+          <th>Niveau scolaire:</th>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{livre.nis}}</td>
+        </tr>
+        <div style="height: 10px;"></div>
+        <tr class="mb-5 bd-highlight info">
+          <th>Format:</th>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{livre.format}}</td>
+        </tr>
+        </table> 
+      </div>
+    </div>
+  </div>
+</div>
+

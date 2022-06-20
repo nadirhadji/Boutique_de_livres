@@ -1,0 +1,52 @@
+<div class="carrousel-acceuil" aria-label="carrousel pour les images marketing" role="carousel">
+
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="{{ elements[0].lien }}" alt="photoDuRabais" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3><span class="badge bg-dark">{{elements[0].nom}}</span></h3>
+            <p>{{elements[0].description}}</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="{{ elements[1].lien }}" alt="photoDuRabais" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3><span class="badge bg-dark">{{elements[1].nom}}</span></h3>
+            <p>{{elements[1].description}}</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" >
+          <img src="{{ elements[2].lien }}" alt="photoDuRabais" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3><span class="badge bg-dark">{{elements[2].nom}}</span></h3>
+            <p>{{elements[2].description}}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+</div>

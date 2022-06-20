@@ -1,0 +1,17 @@
+.conteneur-connexion {
+    display: block;
+    position: relative;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.titre-connexion {
+    text-align: center;
+}
+
+.btn-connexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

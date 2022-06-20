@@ -1,0 +1,41 @@
+<div class="container-annonce">
+    <h1 class="text-center">TÉLÉCHARGER UNE AFFICHE MARKETING</h1>
+
+    <br>
+
+    <label for="formFileDisabled" class="form-label fs-4"
+        aria-describedby="Selectionner une affiche marketing">Télécharger une affiche marketing
+        :</label>
+
+    <div class="conteneur">
+
+        <input type="file" class="file-input" [accept]="requiredFileType" (change)="onFileSelected($event)" #fileUpload
+            style="visibility: hidden;">
+
+        <div class="file-upload">
+
+            {{fileName || "No file uploaded yet."}}
+
+            <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+
+        </div>
+
+        <div class="progress">
+
+            <mat-progress-bar class="progress-bar" mode="determinate" [value]="uploadProgress" *ngIf="uploadProgress">
+            </mat-progress-bar>
+
+            <mat-icon class="cancel-upload" (click)="cancelUpload()" *ngIf="uploadProgress">
+                delete_forever</mat-icon>
+        </div>
+    </div>
+
+    <br>
+
+    <h2><span class="badge shadow  bg-manipulation">Aperçu</span></h2>
+
+    <div><img [src]="url" *ngIf="url" class="img-fluid" alt="affiche marketing"></div>
+
+</div>

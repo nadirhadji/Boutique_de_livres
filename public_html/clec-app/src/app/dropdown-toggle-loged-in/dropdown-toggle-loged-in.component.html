@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="btn btn-primary">
+    <mat-icon>menu</mat-icon>
+</button>
+         <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+        <mat-icon>face</mat-icon>
+        <span>{{nom}}, {{prenom}}</span>
+    </button>
+    <button mat-menu-item class="btn btn-danger" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Deconnexion</span>
+    </button>
+  </mat-menu>

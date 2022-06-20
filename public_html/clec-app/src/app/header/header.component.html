@@ -1,0 +1,44 @@
+<header class="header">
+    <div class="container" aria-label="Navigation principale" role="navigation">
+        <div class="row">
+            <div class="col-lg-12 text-right">
+                <div class="logo_container">
+                    <a routerLink="/accueil">CLEC-APP</a>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar_menu">
+                        <li><a class="option-menu" routerLink="/accueil" aria-describedby="page d'acceuil">Accueil</a></li>
+                        <li><a class="option-menu" routerLink="/accueil" aria-describedby="page des livres">Livres</a></li>
+                        <li><a class="option-menu" routerLink="/club" aria-describedby="page du club">Club</a></li>
+                        <li><a class="option-menu" routerLink="/contact" aria-describedby="page de contact">Contactez-nous</a></li>
+                    </ul>
+
+                    <ul class="navbar_user">
+                        <li>
+                            <a class="lien-navbar-user" routerLink="/search">
+                                <fa-icon [icon]="faSearch"></fa-icon>
+                            </a>
+                        </li>
+                        <li *ngIf="isLogedIn(); else block">
+                            <app-dropdown-toggle-loged-in></app-dropdown-toggle-loged-in>
+                        </li>
+                        <ng-template #block>
+                            <li>    
+                                <app-dropdown-toggle-header></app-dropdown-toggle-header>
+                            </li>
+                        </ng-template>
+
+                        <li class="checkout">
+                            <a class="lien-navbar-user" routerLink="/panier" aria-describedby="page du panier">
+                                <fa-icon [icon]="faShoppingCart"></fa-icon>
+                                <span id="checkout_items" class="checkout_items">{{updatePanier()}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    

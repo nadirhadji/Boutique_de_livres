@@ -1,0 +1,98 @@
+<mat-form-field appearance="fill">
+    <mat-label>Rechercher par</mat-label>
+    <mat-select [(value)]="selectedFilter">
+    <mat-option value="none" (click)='resetValues()'>Tout afficher</mat-option>
+      <mat-option value="category">Catégorie</mat-option>
+      <mat-option value="title">Titre</mat-option>
+      <mat-option value="discount">Rabais</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field *ngIf= "selectedFilter === 'title'" appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput #input (keyup)="filterBy(undefined, input.value)" placeholder="Ex. livre1">
+  </mat-form-field>
+  
+  <mat-form-field *ngIf= "selectedFilter === 'category'" appearance="fill">
+    <mat-label>Sélectionner la catégorie souhaité</mat-label>
+    <mat-select [(value)]="filter1">
+      <mat-option value="maternelle" (click)= "filterBy(undefined, 'maternelle')">Maternelle</mat-option>
+      <mat-option value="premiere" (click)= "filterBy(undefined, 'premiere')">Première</mat-option>
+      <mat-option value="deuxieme" (click)= "filterBy(undefined, 'deuxieme')">Deuxième</mat-option>
+      <mat-option value="troisieme" (click)= "filterBy(undefined, 'troisieme')">Troisième</mat-option>
+      <mat-option value="quatrieme" (click)= "filterBy(undefined, 'quatrieme')">Quatrième</mat-option>
+      <mat-option value="cinquieme" (click)= "filterBy(undefined, 'cinquieme')">Cinquième</mat-option>
+      <mat-option value="sixieme" (click)= "filterBy(undefined, 'sixieme')">Sixième</mat-option>
+      <mat-option value="autres" (click)= "filterBy(undefined, 'autres')">Autres</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field *ngIf= "selectedFilter === 'discount'" appearance="fill">
+    <mat-label>Sélectionner l'interval de rabais souhaité</mat-label>
+    <mat-select [(value)]="filter2">
+      <mat-option value="[0,20]" (click)= "filterBy({min : 0, max : 20})"> [0% , 20%] </mat-option>
+      <mat-option value="[20,40]" (click)= "filterBy({min : 20, max : 40})"> [20% , 40%] </mat-option>
+      <mat-option value="[40,60]" (click)= "filterBy({min : 40, max : 60})"> [40% , 60%] </mat-option>
+      <mat-option value="[60,100]" (click)= "filterBy({min : 60, max : 100})"> [60% , 100%] </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  
+  <div class="mat-elevation-z8">
+  
+    <table mat-table [dataSource]="dataSource">
+  
+        <!-- Colonne Code Produit -->
+        <ng-container matColumnDef="cpr">
+            <th mat-header-cell *matHeaderCellDef>cpr</th>
+            <td mat-cell *matCellDef="let element"> {{element.cpr}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="nis">
+            <th mat-header-cell *matHeaderCellDef>catégorie</th>
+            <td mat-cell *matCellDef="let element"> {{element.nis}} </td>
+        </ng-container>
+  
+        <!-- Colonne Auteur-->
+        <ng-container matColumnDef="aut">
+            <th mat-header-cell *matHeaderCellDef> Auteur </th>
+            <td mat-cell *matCellDef="let element"> {{element.aut}} </td>
+        </ng-container>
+  
+        <!-- Colonne Titre -->
+        <ng-container matColumnDef="titre">
+            <th mat-header-cell *matHeaderCellDef> Titre </th>
+            <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+        </ng-container>
+  
+        <!-- Colonne Prix -->
+        <ng-container matColumnDef="prix">
+            <th mat-header-cell *matHeaderCellDef> Prix ( CAD )</th>
+            <td mat-cell *matCellDef="let element"> {{element.prix}} </td>
+        </ng-container>
+  
+        <!-- Colonne Rabais -->
+        <ng-container matColumnDef="rab">
+            <th mat-header-cell *matHeaderCellDef> Rabais ( % )</th>
+            <td mat-cell *matCellDef="let element">
+            {{element.rab}}
+        </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Suprimer </th>
+            <td mat-cell *matCellDef="let element">
+            <mat-button-toggle mat-raised-button (click)="deleteBook(element)">Suprimer le livre</mat-button-toggle>
+        </td>
+        </ng-container>
+  
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator [pageSizeOptions]="[3, 7, 17]" showFirstLastButtons
+        aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  

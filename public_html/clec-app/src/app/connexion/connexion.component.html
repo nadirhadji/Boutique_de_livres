@@ -1,0 +1,39 @@
+
+    <div class="conteneur-connexion" aria-label="connexion utilisateur" role="connexion">
+        <div class="conteneur-formulaire-connexion">
+
+            <div class="titre-connexion">
+                <h2>Connexion</h2>
+            </div>
+
+            <div class="formulaire-connexion">
+
+                <form #authData="ngForm" (ngSubmit)="login(authData.value)">
+                    <div class="mb-3 mt-3">
+                    <label for="username" class="form-label">Courriel</label>
+                    <input type="text" class="form-control" id="email" placeholder="Entrer votre username" name="username" aria-describedby="courriel de l'utilisateur" ngModel>
+                    </div>
+                    <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Entrer votre mot de passe" name="password" aria-describedby="mot de passe de l'utilisateur" ngModel>
+                    </div>
+                    <label for="type" class="form-label">Type de compte</label>
+
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="type" ngModel>
+                        <option selected>veuillez sélectionner un type</option>
+                        <option value="1">Administrator</option>
+                        <option value="2">Client</option>
+                        <option value="3">École</option>
+                      </select>
+                      <br>
+                      <br>
+                    <div class="btn-connexion">
+                            <input class="btn btn-primary" type="submit" value="Connexion">
+                    </div>
+                </form>
+
+                <div *ngIf="connexionErreur" style="color:red">L'identifiant ou le mot de passe est invalide.</div>
+            </div>
+
+        </div>
+    </div>

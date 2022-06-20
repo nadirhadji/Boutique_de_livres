@@ -1,0 +1,48 @@
+
+<div *ngIf="panierItems.length === 0" >
+  <div style="height: 80px;"></div>
+  <div class="alert alert-info">Votre panier est vide.</div>
+  <app-liste-produits></app-liste-produits>
+</div>
+
+
+<div *ngIf="panierItems.length > 0" class="cart-body">
+  <div class="small-container cart-page" aria-label="liste des produits achetés" role="afficher la liste des produits achetés avec le prix total">
+    <div style="height: 50px;"></div>
+    <h1 class="mb-5" style="font-weight: 500;">Votre panier: </h1>
+    <div style="height: 5px;"></div>
+    <table>
+        <tr>
+          <th>Produit</th>
+          <th>Quantité</th>
+          <th>Total</th>
+        </tr>
+
+          
+          <tr *ngFor="let livre of panierItems">
+            <td>
+                <div class="cart-info">
+                  <img src="../../assets/images-produits/default-img.jpg" alt="image de livre">
+                  <div>
+                    <p aria-describedby="effacer du livre">{{livre.titre}}</p>
+                    <small aria-describedby="prix du livre">Prix: {{livre.prix | currency}}</small><br>
+                  </div>
+                </div>
+            </td>
+            <td><div class="btn btn-dark">1</div></td>
+            <td>{{livre.prix | currency:'CAD'}}</td>
+          </tr>
+    
+    </table>
+  
+    <div class="total-price" aria-describedby="prix total">
+        <table>
+          <tr id="total-price-values">
+            <td>Total</td>
+            <td><span id="final-price">{{total | currency:"CAD"}}</span></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
+

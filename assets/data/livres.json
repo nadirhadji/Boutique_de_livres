@@ -1,0 +1,74 @@
+[
+  {
+	"id": 0,
+	"cpr": 15879799,
+	"aut": "Othmane Azzouzi",
+	"titre": "Book #0", 
+	"prix": 15.0, 
+  	"rab": 10,
+	"des": "N/A", 
+	"nis":"maternelle", 
+	"format":"ebook", 
+	"img": "default-img.jpg"
+  },
+  {
+		"id": 1,
+		"cpr": 15879799,
+		"aut": "Othmane Azzouzi",
+		"titre": "Book #1", 
+		"prix": 15.0, 
+		"rab": 10,
+		"des": "N/A", 
+		"nis":"maternelle", 
+		"format":"ebook", 
+		"img": "default-img.jpg"
+  },
+	{
+		"id": 2,
+		"cpr": 15879799,
+		"aut": "Othmane Azzouzi",
+		"titre": "Book #2", 
+		"prix": 15.0, 
+		"rab": 10,
+		"des": "N/A", 
+		"nis":"maternelle", 
+		"format":"ebook", 
+		"img": "default-img.jpg"
+	},
+	{
+	"id": 3,
+	"cpr": 15879799,
+	"aut": "Othmane Azzouzi",
+	"titre": "Book #3", 
+	"prix": 15.0, 
+  "rab": 10,
+	"des": "N/A", 
+	"nis":"maternelle", 
+	"format":"ebook", 
+	"img": "default-img.jpg"
+	},
+	{
+		"id": 4,
+		"cpr": 15879798,
+		"aut": "Othmane Azzouzi",
+		"titre": "Book #4", 
+		"prix": 15.0, 
+		"rab": 10,
+		"des": "N/A", 
+		"nis":"ss", 
+		"format":"ebook", 
+		"img": "default-img.jpg"
+	},
+	{
+		"id": 5,
+		"cpr": 15879798,
+		"aut": "test",
+		"titre": "Book #18", 
+		"prix": 15.0, 
+		"rab": 10,
+		"des": "Test", 
+		"nis":"maternelle", 
+		"format":"ebook", 
+		"img": "default-img.jpg"
+	}
+]

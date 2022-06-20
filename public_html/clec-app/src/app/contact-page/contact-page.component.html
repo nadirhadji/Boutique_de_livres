@@ -1,0 +1,51 @@
+ <div class="contact-form-container" aria-label="formulaire de contact" role="formulaire de contact">
+    <div class="contact-form">
+        <div class="contact-form-info">
+            <h3 class="contact-form-title">Besoin d'un coup de main?</h3>
+            <p class="contact-form-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo dolorem
+                nulla esse ad unde eum aspernatur omnis, id nostrum aut maxime inventore eaque adipisci
+                voluptatum minima atque optio rerum aperiam.</p>
+            <div class="contact-form-info">
+                
+                <div class="with-icon">
+                    <mat-icon> map</mat-icon><span class="aligned-with-icon">&nbsp;     201 Av. du Président-Kennedy, Montréal, QC H2X 3Y7</span> 
+                </div>
+                <br>
+                <div class="with-icon">
+                
+                
+                <mat-icon>mail</mat-icon><span class="aligned-with-icon">&nbsp;  lorem@uqam.ca</span> 
+                
+                   
+                </div>
+                <br>
+                <div class="with-icon">
+                    <mat-icon> local_phone</mat-icon><span class="aligned-with-icon">&nbsp;  123-456-789</span> 
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-form">
+            <form #contactForm="ngForm" (ngSubmit)="vldMsg(contactForm)">
+                <h3 class="title">Contactez-nous</h3>
+                <div class="input-container">
+                    <input type="text" name="name" class="input form-control" list="datalistOptions"
+                        id="exampleDataList" placeholder="Nom complet" aria-describedby="Nom complet"  ngModel/>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" class="input form-control" list="datalistOptions"
+                        id="exampleDataList" placeholder="Adresse courriel" aria-describedby="Adresse courriel"  ngModel/>
+                </div>
+                <div class="input-container">
+                    <input type="tel" name="phone" class="input form-control" list="datalistOptions"
+                        id="exampleDataList" placeholder="Telephone" aria-describedby="Telephone"  ngModel/>
+                </div>
+                <div class="input-container textarea">
+                    <textarea name="message" class="input form-control" list="datalistOptions" id="exampleDataList"
+                        placeholder="Message..." aria-describedby="message"></textarea>
+
+                </div>
+                <input type="submit" value="Envoyer" class="btn-form" (click)="vldMsg(contactForm)"  aria-describedby="envoyer le message"/>
+            </form>
+        </div>
+    </div>
+</div>

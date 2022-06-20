@@ -1,0 +1,81 @@
+<div class="conteneur-inscription" aria-label="inscription ecole" role="inscription">
+
+    <div class="titre-inscription">
+        <h2>INSCRIRE MON ECOLE</h2>
+    </div>
+
+    <div class="formulaire-inscription">
+
+        <form #inscriptionData="ngForm" (ngSubmit)="register(inscriptionData.value)">
+
+            <div class="mb-3 mt-3">
+                <label for="name" class="form-label"><strong>Nom de l'école *</strong></label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="nom de l'ecole"
+                    required ngModel>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="code" class="form-label"><strong>Code de l'école *</strong></label>
+                <input type="text" class="form-control" id="code" name="code" aria-describedby="code de l'ecole"
+                    required ngModel>
+            </div>
+
+            <div class="formulaire-inscription-adresse">
+
+                <div class="adresse mb-3 mt-3">
+                    <label for="adresse" class="form-label"><strong>Numero et nom de rue *</strong></label>
+                    <input type="" class="form-control" id="adresse" name="adresse"
+                        aria-describedby="numero et nom de rue" required ngModel>
+                </div>
+
+                <div class="ville mb-3 mt-3">
+                    <label for="ville" class="form-label"><strong>Ville *</strong></label>
+                    <input type="" class="form-control" id="ville" name="ville" aria-describedby="ville" required ngModel>
+                </div>
+
+                <div class="province mb-3 mt-3">
+                    <label for="province" class="form-label"><strong>Province *</strong></label>
+                    <input class="form-control" list="provinces" id="province" name="province"
+                        aria-describedby="province" required ngModel>
+                    <datalist id="provinces">
+                        <option value="Québec">
+                        <option value="Ontario">
+                        <option value="Alberta">
+                        <option value="Colombie-Britannique">
+                        <option value="Île-du-Prince-Édouard">
+                        <option value="Manitoba">
+                        <option value="Nouveau-Brunswick">
+                        <option value="Nouvelle-Écosse">
+                        <option value="Saskatchewan ">
+                        <option value="Terre-Neuve-et-Labrador">
+                        <option value="Saskatchewan ">
+                        <option value="Territoires du Nord-Ouest ">
+                        <option value="Nunavut">
+                        <option value="Yukon">
+                    </datalist>
+                </div>
+
+                <div class="postal mb-3 mt-3">
+                    <label for="postal" class="form-label"><strong>Code Postale *</strong></label>
+                    <input class="form-control" id="postal" name="postal" aria-describedby="code postale de l'ecole"
+                        pattern="[A-Za-z][0-9][A-Za-z][ ]?[0-9][A-Za-z][0-9]" required ngModel>
+                </div>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="email" class="form-label"><strong>Courriel *</strong></label>
+                <input type="email" class="form-control" id="email" placeholder="Saisir votre adresse courriel"
+                    name="email" aria-describedby="adresse courriel de l'ecole" required ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="telephone" class="form-label"><strong>Numero de télephone *</strong></label>
+                <input type="tel" class="form-control" id="telephone" name="telephone"
+                    placeholder="Saisir un numero de télephone" aria-describedby="numero de telephone de l'ecole"
+                    pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required ngModel>
+            </div>
+            <div class="btn-connexion">
+                <input type="submit" value="Créer le compte" class="btn btn-primary" aria-describedby="bouton pour creer le compte ecole">
+            </div> 
+        </form>
+    </div>
+</div>

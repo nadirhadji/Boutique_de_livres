@@ -1,0 +1,7 @@
+::ng-deep.mat-button-toggle-group {
+    width: 100%;
+}
+
+::ng-deep.mat-button-toggle {
+    width: 33%;
+}

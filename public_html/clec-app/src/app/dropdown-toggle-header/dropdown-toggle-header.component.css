@@ -1,0 +1,13 @@
+a {
+    display: inline;
+    align-items: center;
+    color: blanchedalmond;
+}
+
+.option-menu {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+}

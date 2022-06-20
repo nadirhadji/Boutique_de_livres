@@ -1,0 +1,81 @@
+@charset "utf-8"; 
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+html,body{
+    font-family: "Nunito Sans" , sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+    height: 100%;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body{
+
+    text-align:center;
+    
+    }
+
+div {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: "Nunito Sans" , sans-serif ;
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 500;
+    color: #989898;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(163, 110, 110, 0.01) 0 0 1px;
+}
+
+
+p a{
+    display: inline;
+    position: relative;
+    color: inherit;
+    transition: all 200ms ease;
+}
+
+a, a:hover, a:active, a:link {
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(163, 110, 110, 0.01) 0 0 1px;
+}
+
+p a:active {
+    position: relative;
+    color: #ff6347;
+}
+
+p a:hover {
+    color: #ff6347;  
+}
+
+p a:hover::after {
+    opacity: 0.2;
+}
+::selection {
+    background: #fde0db;
+    color: #ff6347;
+}
+p::selection::selection{
+    background: #fde0db;
+}
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  

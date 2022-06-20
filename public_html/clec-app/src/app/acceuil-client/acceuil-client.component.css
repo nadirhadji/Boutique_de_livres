@@ -1,0 +1,25 @@
+.conteneur-panel {
+    position: relative;
+    width: auto;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.categorie-item {
+    justify-content: center;
+    align-items: center;
+}
+
+.img-categorie {
+    display: block;
+    position: relative;
+}
+
+.description-categorie {
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}

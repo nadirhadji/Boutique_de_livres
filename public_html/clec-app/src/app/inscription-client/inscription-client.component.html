@@ -1,0 +1,49 @@
+<div class="conteneur-inscription" aria-label="inscription utilisateur" role="inscription">
+
+    <div class="titre-inscription">
+        <h2>M'INSCRIRE</h2>
+    </div>
+
+    <div class="formulaire-inscription">
+
+        <form #inscriptionData="ngForm" (ngSubmit)="register(inscriptionData.value)">
+            <div class="nom mb-3 mt-3">
+                <label for="lastname" class="form-label" aria-describedby="nom de l'utilisateur"><strong>Nom
+                        *</strong></label>
+                <input type="text" class="form-control" placeholder="Nom" id="lastname" name="lastname" required ngModel>
+            </div>
+
+            <div class="prenom mb-3 mt-3">
+                <label for="firstname" class="form-label" aria-describedby="prénom de l'utilisateur"><strong>Prénom
+                        *</strong></label>
+                <input type="text" class="form-control" placeholder="Prénom" id="firstname" name="firstname" required ngModel>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="email" class="form-label"><strong>Courriel *</strong></label>
+                <input type="email" class="form-control" id="email" placeholder="Saisir votre adresse courriel"
+                    name="email" aria-describedby="adresse courriel de l'utilisateur" required ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="telephone" class="form-label"><strong>Numero de télephone *</strong></label>
+                <input type="tel" class="form-control" id="telephone" name="telephone"
+                    placeholder="Saisir un numero de télephone" aria-describedby="numero de télephone de l'utilisateur"
+                    pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label"><strong>Mot de passe *</strong></label>
+                <input type="password" class="form-control" id="pwd"
+                    placeholder="Saisir un mot de passe d'au moin 6 caractères" name="pwd"
+                    aria-describedby="mot de passe de l'utilisateur" required ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="pwd2" class="form-label"><strong>Entrez le mot de passe à nouveau *</strong></label>
+                <input type="password" class="form-control" id="pwd2" placeholder="Saisir encore le mot de passe"
+                    name="pwd2" aria-describedby="mot de passe de l'utilisateur" required ngModel>
+            </div>
+            <div class="btn-connexion">
+                <input class="btn btn-primary" type="submit" value="Créer le compte">
+            </div>
+        </form>
+    </div>
+</div>

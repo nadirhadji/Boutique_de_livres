@@ -1,0 +1,20 @@
+
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle value="ajouter" (click)="updateAddView()" checked>Ajouter une ecole</mat-button-toggle>
+  <mat-button-toggle value="supprimer" (click)="updateRemoveView()">Supprimer une ecole</mat-button-toggle>
+  <mat-button-toggle value="afficher" (click)="updateListView()">Liste des ecoles</mat-button-toggle>
+</mat-button-toggle-group>
+
+<div *ngIf="openedContainer === 'add'">
+  <app-inscription-ecole></app-inscription-ecole>
+</div>
+
+<div *ngIf="openedContainer === 'list'">
+  <app-list-ecoles></app-list-ecoles>
+</div>
+
+<div *ngIf="openedContainer === 'remove'">
+
+</div>
+
+

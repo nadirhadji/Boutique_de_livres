@@ -1,0 +1,111 @@
+.header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background: #111111;
+    z-index: 10;
+}
+
+.main_nav_container {
+    width: 100%;
+    height: 20%;
+    background: #111111;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.015);
+}
+
+.navbar {
+    width: auto;
+    height: 95px;
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar_menu li {
+    display: inline-block;
+}
+
+.navbar_menu li a {
+    display: inline-block;
+    color: #b7b7b7;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px;
+    transition: color 0.3s ease;
+
+}
+
+.navbar_menu li a:hover {
+    color: #e53637;
+}
+
+.navbar_user {
+    margin-left: 37px;
+}
+
+.navbar_user li{
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar_user li a {
+    display: block;
+}
+
+.navbar_user li .lien-navbar-user { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    color:#b7b7b7;
+    transition: color 0.3s ease;
+}
+
+.navbar_user li a:hover {
+    color: #dc3545;
+}
+
+
+.checkout a {
+    background: #eceff6;
+    border-radius: 50%;
+    left: 20px;
+}
+
+.checkout_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -9px;
+    left: 22px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #dc3545;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.logo_container {
+    display: inline-block;
+    position: relative;
+    height: 95px;
+    padding: 35px;
+}
+
+.logo_container a {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}

@@ -1,0 +1,89 @@
+<div class="inventory-panel mt-5 pt-3" aria-label="gestion d'inventaire des livres" role="gestion d'inventaire des livres">
+    <div class="container-md">
+<<<<<<< HEAD
+      <div class="row">
+        <div class="mt-4 col-md-12 fw-bold fs-3 text-center">INVENTAIRE DES LIVRES</div>
+      </div>
+      <div class="row">
+        <div class="card mt-4">
+          <div class="card-body">
+            <label for="formFileDisabled" class="form-label fs-4">Ajouter un livre:</label>
+=======
+        <div class="row">
+            <div class="mt-4 col-md-12 fw-bold fs-3 text-center">INVENTAIRE DES LIVRES</div>
+        </div>
+
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="ajouter" (click)="updateAddView()" checked>Ajouter un livre</mat-button-toggle>
+            <mat-button-toggle value="modifier" (click)="updateUpdateView()">Suprimer un livre</mat-button-toggle>
+            <mat-button-toggle value="afficher" (click)="updateListView()">Liste des livres</mat-button-toggle>
+        </mat-button-toggle-group>
+>>>>>>> 7f7315d2f8f9c9008b1db92d3d7adfd5bca7bfad
+
+            <!-- <form action="#"> -->
+
+<<<<<<< HEAD
+              <div class="col-sm-10">
+                <input type="text" class="form-control mb-3" placeholder="Titre"  aria-describedby="titre du livre" disabled>
+                <input type="text" class="form-control mb-3" placeholder="Auteur" aria-describedby="auteur du livre"  disabled>
+                <textarea class="form-control mb-3" placeholder="Description" aria-describedby="description du livre"  disabled></textarea>
+                <input type="text" class="form-control mb-3" placeholder="Nombre de pages" aria-describedby="Nombre de page du livre"  disabled>
+                <input type="text" class="form-control mb-3" placeholder="Code du produit" aria-describedby="code bar du livre"  disabled>
+                <input type="text" class="form-control mb-3" placeholder="Prix" aria-describedby="prix du livre"  disabled>
+                <select class="form-select" disabled>
+                  <option>Niveau scolaire</option>
+                </select><br>
+                <button class="form-control" onclick="document.getElementById('getFile').click()">Clicker pour télécharger une photo de livre</button>
+                <input type='file' id="getFile" style="display:none"> 
+                
+            <!-- </form> -->
+
+            <br>
+            <div class="position-relative">
+              <button type="button" class="btn btn-primary position-relative position-right">Ajouter</button>
+            </div>
+          </div>
+=======
+        <div *ngIf="openedContainer === 'update'">
+                <app-update-book></app-update-book>
+>>>>>>> 7f7315d2f8f9c9008b1db92d3d7adfd5bca7bfad
+        </div>
+      </div>
+      <div><br /><br /><br />
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Titre</th>
+              <th scope="col">Prix</th>
+              <th scope="col">Modifications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Livre #01</td>
+              <td>$0.00</td>
+              <td><a href="#" aria-describedby="supprimer livre" >supprimer</a>&nbsp;&nbsp;<a href="#" aria-describedby="modifier livre">modifier</a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Livre #02</td>
+              <td>$0.00</td>
+              <td><a href="#" aria-describedby="supprimer livre">supprimer</a>&nbsp;&nbsp;<a href="#" aria-describedby="modifier livre">modifier</a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Livre #03</td>
+              <td >$0.00</td>
+              <td><a href="#" aria-describedby="supprimer livre">supprimer</a>&nbsp;&nbsp;<a href="#" aria-describedby="modifier livre">modifier</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<<<<<<< HEAD
+  </div><br><br><br><br>
+=======
+</div>
+>>>>>>> 7f7315d2f8f9c9008b1db92d3d7adfd5bca7bfad

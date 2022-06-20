@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+  }
+mat-slider {
+    width: 80px;
+  }
+.mat-form-field {
+    font-size: 14px;
+    width: 40%;
+    padding-left: 5%;
+  }
+mat-button-toggle{
+  width: auto;
+} 

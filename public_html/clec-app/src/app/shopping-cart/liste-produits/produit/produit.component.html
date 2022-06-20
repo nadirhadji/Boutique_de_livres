@@ -1,0 +1,23 @@
+<div class="card mb-4 shadow-sm">
+  <img class="bd-placeholder-img card-img-top"  src="..\..\..\assets\images\images-produits\default-img.jpg">
+  <div class="card-body">
+    <h2 class="card-text">{{livreItem.titre}}</h2>
+    <p class="card-text">{{livreItem.des}}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary btn-sm" (click)="handleAddToCart()">Acheter cet article</button>
+        <a routerLink="/product/{{livreItem.id}}" class="btn btn-sm btn-outline-secondary">plus de détails</a>
+      </div>
+      
+      <div *ngIf = "livreItem.finalPrice; else elseBlock">
+        <strong><del>{{livreItem.prix | currency:'CAD'}}</del></strong>
+        <br>
+        <strong>{{livreItem.finalPrice ?? livreItem.prix | currency:'CAD'}}</strong>
+      </div>
+      <ng-template #elseBlock>
+        <strong>{{livreItem.prix | currency:'CAD'}}</strong>
+      </ng-template>
+      
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,84 @@
+    <mat-sidenav-container  style="height : 100vh;">
+
+        <mat-sidenav #sideNavAdmin opened mode="side" 
+            class="d-inline-flex flex-column text-white sidebar-client sidebar-elements sidebar-text"
+            [fixedInViewport]="false" 
+            [fixedTopGap]="90"
+            [fixedBottomGap]="0"> 
+    
+                <ul class="nav nav-pills flex-column mb-auto">
+
+                    <li class="element-sidebar">
+                        <div class="text-white" style="text-align: center;">
+                            <span class="ms-2">{{adminName}}</span>
+                        </div>
+                    </li>
+                    <li class="element-sidebar">
+                        <button class="nav-link text-white" (click)="openAnnonce()">
+                            <mat-icon>home</mat-icon>
+                            <span class="ms-2">Annonce Marketing</span>
+                        </button>
+                    </li>
+
+                    <li class="element-sidebar">
+                        <button class="nav-link text-white" (click)="openRabais()">
+                            <mat-icon>shopping_cart</mat-icon>
+                            <span class="ms-2">Gestion Rabais</span>
+                        </button>
+                    </li>
+    
+                    <li class="element-sidebar">
+                        <button class="nav-link text-white" (click)="openLivres()">
+                            <mat-icon>history</mat-icon>
+                            <span class="ms-2">Inventaire Livres</span>
+                        </button>
+                    </li>
+    
+                    <li class="element-sidebar">
+                        <button class="nav-link text-white" (click)="openEcole()">
+                            <mat-icon>settings</mat-icon>
+                            <span class="ms-2">Comptes Ecoles</span>
+                        </button>
+                    </li>
+
+                </ul>
+        </mat-sidenav>
+    
+        <mat-sidenav-content>
+    
+            <div *ngIf="isSidebarOpen; else close">
+                <button type="button" mat-button (click)="sideNavAdmin.toggle()" (click)="toggleSidebar()" >
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                    Fermer Menu
+                </button>
+            </div>
+            <ng-template #close>
+                <button type="button" mat-button (click)="sideNavAdmin.toggle()" (click)="toggleSidebar()" >
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                    Ouvrir Menu
+                </button>
+            </ng-template>
+            
+                <!--Section Annonce -->
+                <div *ngIf="viewName === 'annonce'">
+                        <app-admin-marketing></app-admin-marketing>
+                </div>
+    
+                <!--Section Rabais -->
+                <div *ngIf="viewName === 'rabais'">
+                        <app-admin-rabais></app-admin-rabais>
+                </div>
+    
+                <!--Section Ecole -->
+                <div *ngIf="viewName === 'ecole'">
+                    <app-admin-ecoles></app-admin-ecoles>
+                </div>
+    
+                <!--Section Livres -->
+                <div *ngIf="viewName === 'livre'">
+                    <app-admin-inventaire></app-admin-inventaire>
+                </div>
+    
+        </mat-sidenav-content>
+    
+    </mat-sidenav-container>

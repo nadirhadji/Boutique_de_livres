@@ -1,0 +1,10 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" #clickHoverMenuTrigger="matMenuTrigger" (click)="openMenu()" class="btn btn-primary">
+    <mat-icon>menu</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" class="custom">
+        <div class="menu">
+            <button mat-menu-item class="btn btn-success option-menu" aria-describedby="page de connexion" (click)="openLoginComponent()"><a>Connexion</a></button>
+            <button mat-menu-item class="btn btn-primary option-menu" aria-describedby="page d'inscription personnel" (click)="openInscriptionClientComponent()"><a>Inscription</a></button>
+        </div>
+</mat-menu>
